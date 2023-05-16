@@ -12,8 +12,8 @@ using SPV_REST.Models;
 namespace SPV_REST.Migrations
 {
     [DbContext(typeof(PersonContext))]
-    [Migration("20230416234034_Initial")]
-    partial class Initial
+    [Migration("20230516191046_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,6 +50,9 @@ namespace SPV_REST.Migrations
 
                     b.Property<DateTime>("Tom")
                         .HasColumnType("datetime2");
+
+                    b.Property<int?>("TotalDays")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

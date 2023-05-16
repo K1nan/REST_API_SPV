@@ -48,6 +48,9 @@ namespace SPV_REST.Migrations
                     b.Property<DateTime>("Tom")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("TotalDays")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Persons");

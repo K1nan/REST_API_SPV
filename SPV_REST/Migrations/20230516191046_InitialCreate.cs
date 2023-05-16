@@ -1,13 +1,12 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
-using SPV_REST.Models;
 
 #nullable disable
 
 namespace SPV_REST.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -23,7 +22,8 @@ namespace SPV_REST.Migrations
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Fom = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Tom = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Salary = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Salary = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TotalDays = table.Column<int>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {

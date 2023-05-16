@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SPV_REST.Models;
+using System;
 
 namespace SPV_REST.Models
 {
@@ -9,7 +10,9 @@ namespace SPV_REST.Models
             : base(options)
         {
         }
+
         public DbSet<Person> Persons { get; set; } = null!;
+ 
     }
 }
 

@@ -1,0 +1,7 @@
+-I den här uppdaterade versionen är TotalDays-egenskapen av typen int? (nollbart heltal). Egenskapen har ett privat fält _totalDays för att lagra det beräknade totala antalet dagar.
+
+-Getter för egenskapen TotalDays kontrollerar om fältet _totalDays är null. Om den är null, beräknar den det totala antalet dagar genom att subtrahera datumdelarna av Tom och Fom och tilldelar resultatet till _totalDays. Efterföljande anrop till gettern returnerar det lagrade _totalDays-värdet.
+
+-Inställningen av egenskapen TotalDays låter dig ställa in det totala antalet dagar manuellt om det behövs.
+
+-Observera att beräkningen av TotalDays endast bygger på datumdelarna av Tom och Fom. 
