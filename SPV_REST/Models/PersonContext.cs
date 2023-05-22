@@ -10,7 +10,6 @@ namespace SPV_REST.Models
             : base(options)
         {
         }
-
         public DbSet<Person> Persons { get; set; } = null!;
  
     }

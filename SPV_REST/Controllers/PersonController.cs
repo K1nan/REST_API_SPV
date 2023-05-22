@@ -18,18 +18,29 @@ namespace SPV_REST.Controllers
         
         //Get: api/Person
         [HttpGet]
-        public JsonResult GetPersons(int id)
+        public IActionResult GetPersons(int id)
         {
-            var result = _dbcontext.Persons.Find(id);
-            if (result == null)
+            var persons = _dbcontext.Persons.ToList();
+            if (persons.Count == 0)
             {
-                return new JsonResult(NotFound());
+                return NotFound();
             }
-            return new JsonResult(Ok(result));
+            return Ok(persons);
         }
 
-        //https://www.youtube.com/watch?v=Tj3qsKSNvMk&list=RDCMUCGjv_3tbzJ8yKuvacoqmO-Q&start_radio=1&rv=Tj3qsKSNvMk&t=383
+        // GET: api/Person/id
+        [HttpGet("{id}")]
+        public IActionResult GetPerson(int id)
+        {
+            var person = _dbcontext.Persons.Find(id);
+            if (person == null)
+            {
+                return NotFound();
+            }
+            return Ok(person);
+        }
 
+        
         //Post: api/Person
         [HttpPost]
         public JsonResult PostPersons(Person person)

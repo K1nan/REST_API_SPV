@@ -7,4 +7,4 @@ Några noticer för rapport skrivande
 -Inställningen av egenskapen TotalDays låter dig ställa in det totala antalet dagar manuellt om det behövs.
 
 -Observera att beräkningen av TotalDays endast bygger på datumdelarna av Tom och Fom. 
-För att testa datum : https://www.timeanddate.com/date/durationresult.html?d1=23&m1=10&y1=2019&d2=16&m2=05&y2=2024
+För att testa datum : https://www.timeanddate.com/date/duration.html
